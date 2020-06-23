@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:jsf="http://xmlns.jcp.org/jsf"
+	lang="pt-br">
+	<head jsf:id="head">
+		<meta charset="ISO-8859-1"/>
+		<title>Loucademia</title>
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700" rel="stylesheet"/>
+		<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;700" rel="stylesheet"/>
+		<link rel="stylesheet" type="text/css" href="styles/main.css"/>
+	</head>
+	<body>
+		<header>
+			<img alt="Loucademia" src="images/Loucademia_Logotipo.png"/>
+			<nav>
+				<div>
+					<a jsf:outcome="Aluno">Novo aluno</a>
+			   		<a jsf:outcome="pesquisaAluno?clear=true">Pesquisa de aluno</a>
+			 		<a jsf:outcome="controleAcesso">Controle de acesso</a>
+					<a jsf:outcome="relatorioEntradaSaida?clear=true">Relatórios de Entradas e saídas</a>
+				<!--	<a jsf:outcome="relatorioSituacao">Relatórios de Situações</a> 
+					-->
+				</div>
+			</nav>
+		</header>
+		<h1>#{title}</h1>
+		<h:panelGroup rendered="#{!facesContext.messageList.isEmpty()}">
+			<div id="infoMessage">
+				<h:messages/>
+			</div>		
+		</h:panelGroup>
+		<main>
+			<ui:insert name="Content"/>	
+		</main>
+		<footer>
+			
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,235 @@
+:root {
+	--text-green-color: #8bbf18;
+	--primary-color: #8d02ae;
+	--max-width: 550px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Roboto, sans-serif;
+}
+
+body {
+	background-color: var(--primary-color);
+	text-align: center;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 10vh;
+	width: 80vw;
+}
+
+header img {
+	display: block;
+	background-repeat: no-repeat; 
+	margin: 0 auto;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	margin: 20px 0 20px 0;
+}
+
+nav a {
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 20px;
+	text-transform: uppercase;
+}
+
+nav a:hover {
+	text-decoration: underline;
+}
+
+h1,
+div#infoMessage,
+fieldset,
+.fieldgroup_bt,
+table {
+	margin: 30px auto;
+	width: var(--max-width);
+	text-transform: uppercase;
+}
+
+h1 {
+	color: var(--text-green-color);
+	background-color: white;
+	border-left: 10px solid var(--text-green-color);
+	border-right: 10px solid var(--text-green-color);
+	border-top: 2px solid var(--text-green-color);
+	border-bottom: 2px solid var(--text-green-color);
+	border-radius: 30px;
+}
+
+div#infoMessage{
+	background-color: #ffcc00;
+	padding: 10px;
+	margin: 10px auto;
+	border-radius: 5px 10px 5px 0px;
+	color: #d40000;
+	font-weight: bold;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+fieldset {
+	background-color: white;
+	display: flex;
+	text-align: left;
+	border-radius: 5px;
+	border: 0px;
+	padding-bottom: 10px;
+}
+
+
+legend {
+	background-color: white;
+	border-radius: 2px;
+	padding: 5px 5px 15px 5px;
+	border-radius: 5px;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: bold;
+}
+
+legend,
+label {
+	color: var(--primary-color);
+}
+
+input,
+select {
+	border: 1px solid var(--primary-color);
+	margin-bottom: 7px;
+	margin-left: 20px;
+	padding: 5px 0;
+	background: transparent;
+}
+
+label {
+	margin-left: 20px;
+	font-family: Ubuntu, sans-serif;
+	font-size: 13px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input#id{
+	width: 100px;
+	text-align: center;
+}
+
+input#nome,
+input#address,
+input#complemento,
+input#email  {
+	width: 90%;
+}
+input#dtNascimento,
+select#sexo,
+select#uf,
+select#situacao {
+	text-align: center;
+}
+
+.fieldgroup_bt {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+input[type=button],
+input[type=submit] {
+	flex: 1;
+	cursor: pointer;
+	background-color: var(--text-green-color);
+	border: 1px solid #5b7b1d;
+	border-bottom: 3px solid #5b7b1d;
+	padding: 10px 8px;
+	margin-left: 0;
+	color: white;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+.fieldgroup_bt input[type=button] {
+	margin-left: 5px;
+}
+select {
+	cursor: pointer;
+}
+
+input[type=button]:hover,
+input[type=submit]:hover {
+	background-color: #a0de1c;
+	border-bottom: 3px solid var(--text-green-color);
+}
+
+select#situacao {
+	flex: 1;
+	width: 30%;
+}
+
+input#dtNascimento {
+	padding: 4px;
+}	
+.fieldgroup {
+	max-width: 94%;
+	align-items: center;
+	display: flex;
+	flex: 1;
+	justify-content: space-between;
+}
+
+.field {
+		display: flex;
+		flex: 1;	
+		flex-direction: column;
+}
+
+
+table {
+	background-color: white;
+	font-size: 12px;
+	border-spacing: 1px;
+	border-collapse: separate;
+	min-width: 80vw;
+}
+
+th {
+	background-color: var(--text-green-color);
+	color: white;
+	text-transform: uppercase;
+	padding: 5px;
+}
+
+tr:nth-child(even) {
+	background-color: #f3e6f7;
+}
+
+input.acao {
+	padding: 0 5px;
+	background: transparent;
+	border: none;
+	font-size: 12px;
+	color: black;
+}
+
+td {
+	padding: 3px;
+}
